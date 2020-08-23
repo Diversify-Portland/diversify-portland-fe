@@ -1,5 +1,5 @@
 import React from 'react';
-import Splash from '../Pages/Splash';
+import Splash from 'components/Pages/Splash';
 
 export default function App() {
   return <Splash/>;
