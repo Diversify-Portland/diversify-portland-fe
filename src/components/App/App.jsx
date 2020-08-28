@@ -1,6 +1,12 @@
 import React from 'react';
-import Splash from '../Pages/Splash';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import Splash from '../Pages/Splash';
+import NavBar from '../Nav/NavBar';
 
 export default function App() {
-  return <Splash/>;
+  return (
+    <Router>
+      <NavBar />;
+    </Router>
+  );
 }
