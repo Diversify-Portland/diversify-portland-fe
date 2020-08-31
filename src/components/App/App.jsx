@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {
   faTimes,
   faBars,
+  faCaretDown,
 } from '@fortawesome/free-solid-svg-icons';
-library.add(fab, faTimes, faBars);
+library.add(faTimes, faBars, faCaretDown, faFacebook, faInstagram);
 // import Splash from '../Pages/Splash';
 import NavBar from '../Nav/NavBar';
 

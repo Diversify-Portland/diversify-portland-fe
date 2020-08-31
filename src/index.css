@@ -1,11 +1,16 @@
+$green: #32940b;
+
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
+ font-family: 'Quicksand', sans-serif;
+ 
   font-size: 62.5%;
 
   @media screen and (min-width: 100em) {
