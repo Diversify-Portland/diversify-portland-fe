@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ButtonNav from './ButtonNav';
 import DropdownAbout from './DropdownAbout';
 // import logo from '../../assets/diversifyLogoPng.png';
-import './NavBar.css';
+import styles from './NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavBar = () => {
@@ -23,46 +23,65 @@ const NavBar = () => {
   //   ></FontAwesomeIcon>
   // );
   const [click, setClick] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
+  const [DropdownAbout, setDropDownAbout] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobile = () => setClick(false);
 
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropDownAbout(false);
+    } else {
+      setDropDownAbout(true);
+    }
+    // window.innerWidth < 960 ? setDropDownAbout(false) : setDropDownAbout(true);
+  };
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropDownAbout(false);
+    } else {
+      setDropDownAbout(false);
+    }
+    // window.innerWidth < 960 ? setDropDownAbout(false) : setDropDownAbout(false);
+  };
+
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo'>
-         Diversify Portland
+      <nav className={styles.navbar}>
+        <Link to='/' className={styles.navbar_logo}>
+          Diversify Portland
         </Link>
-        <div onClick={handleClick} className='menu-icon'>
+        <div onClick={handleClick} className={styles.menu_icon}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobile}>
+        <ul className={click ? 'nav_menu active' : 'nav_menu'}>
+          <li className={styles.nav_item}>
+            <Link to='/' className={styles.nav_links} onClick={closeMobile}>
               Home
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/about' className='nav-links' onClick={closeMobile}>
+          <li className={styles.nav_item}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}>
+            <Link to='/about' className={styles.nav_links} onClick={closeMobile}>
               About Us {caret}
             </Link>
-            {dropDown && <Dropdown />}
+            {DropdownAbout && <DropdownAbout />}
           </li>
-          <li className='nav-item'>
-            <Link to='/about' className='nav-links' onClick={closeMobile}>
+          <li className={styles.nav_item}>
+            <Link to='/about' className={styles.nav_links} onClick={closeMobile}>
               Community {caret}
             </Link>
-            {dropDown && <Dropdown />}
+            {DropdownAbout && <DropdownAbout />}
           </li>
-          <li className='nav-item'>
-            <Link to='/contact' className='nav-links' onClick={closeMobile}>
+          <li className={styles.nav_item}>
+            <Link to='/contact' className={styles.nav_links} onClick={closeMobile}>
               Contact Us
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link to='/join' className='nav-links-mobile' onClick={closeMobile}>
-            Join Us
+          <li className={styles.nav_item}>
+            <Link to='/join' className={styles.nav_links__mobile} onClick={closeMobile}>
+              Join Us
             </Link>
           </li>
         </ul>
