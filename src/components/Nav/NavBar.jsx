@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ButtonNav from './ButtonNav';
-import Dropdown from './Dropdown';
+import DropdownAbout from './DropdownAbout';
 // import logo from '../../assets/diversifyLogoPng.png';
 import './NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -46,6 +46,12 @@ const NavBar = () => {
           <li className='nav-item'>
             <Link to='/about' className='nav-links' onClick={closeMobile}>
               About Us {caret}
+            </Link>
+            {dropDown && <Dropdown />}
+          </li>
+          <li className='nav-item'>
+            <Link to='/about' className='nav-links' onClick={closeMobile}>
+              Community {caret}
             </Link>
             {dropDown && <Dropdown />}
           </li>
