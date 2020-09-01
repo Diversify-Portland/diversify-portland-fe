@@ -10,18 +10,12 @@ const NavBar = () => {
   const caret = (
     <FontAwesomeIcon icon='caret-down' className='menu-icon'></FontAwesomeIcon>
   );
-  // const x = (
-  //   <FontAwesomeIcon
-  //     icon='times'
-  //     className='menu-icon'
-  //   ></FontAwesomeIcon>
-  // );
-  // const bars = (
-  //   <FontAwesomeIcon
-  //     icon='bars'
-  //     className='menu-icon'
-  //   ></FontAwesomeIcon>
-  // );
+  const x = (
+    <FontAwesomeIcon icon='times' className='menu-icon'></FontAwesomeIcon>
+  );
+  const bars = (
+    <FontAwesomeIcon icon='bars' className='menu-icon'></FontAwesomeIcon>
+  );
   const [click, setClick] = useState(false);
   const [DropdownAbout, setDropDownAbout] = useState(false);
 
@@ -52,35 +46,60 @@ const NavBar = () => {
           Diversify Portland
         </Link>
         <div onClick={handleClick} className={styles.menu_icon}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          <div className={`${styles[bars]} ${click ? [x] : [bars]}`}></div>
         </div>
-        <ul className={click ? 'nav_menu active' : 'nav_menu'}>
+        {/* <i className={click ? 'fas fa-times' : 'fas fa-bars'} /> */}
+
+        <ul
+          className={`${styles.nav_menu} ${
+            click ? styles.active : styles.inactive
+          }`}
+        >
+          {/* <ul className={click ? 'nav_menu active' : 'nav_menu'}> */}
           <li className={styles.nav_item}>
             <Link to='/' className={styles.nav_links} onClick={closeMobile}>
               Home
             </Link>
           </li>
-          <li className={styles.nav_item}
+          <li
+            className={styles.nav_item}
             onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}>
-            <Link to='/about' className={styles.nav_links} onClick={closeMobile}>
+            onMouseLeave={onMouseLeave}
+          >
+            <Link
+              to='/about'
+              className={styles.nav_links}
+              onClick={closeMobile}
+            >
               About Us {caret}
             </Link>
             {DropdownAbout && <DropdownAbout />}
           </li>
           <li className={styles.nav_item}>
-            <Link to='/about' className={styles.nav_links} onClick={closeMobile}>
+            <Link
+              to='/about'
+              className={styles.nav_links}
+              onClick={closeMobile}
+            >
               Community {caret}
             </Link>
             {DropdownAbout && <DropdownAbout />}
           </li>
           <li className={styles.nav_item}>
-            <Link to='/contact' className={styles.nav_links} onClick={closeMobile}>
+            <Link
+              to='/contact'
+              className={styles.nav_links}
+              onClick={closeMobile}
+            >
               Contact Us
             </Link>
           </li>
           <li className={styles.nav_item}>
-            <Link to='/join' className={styles.nav_links__mobile} onClick={closeMobile}>
+            <Link
+              to='/join'
+              className={styles.nav_links__mobile}
+              onClick={closeMobile}
+            >
               Join Us
             </Link>
           </li>
