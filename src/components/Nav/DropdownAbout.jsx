@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './DropdownAbout.css';
+// import styles from './DropdownAbout.css';
 import { AboutItems } from './AboutItems';
 
 const DropdownAbout = () => {
@@ -16,7 +16,7 @@ const DropdownAbout = () => {
           return (
             <li key={i}>
               <Link
-                className={styles.item.className}
+                className={item.className}
                 to={item.path}
                 onClick={() => setClick(false)}
               >

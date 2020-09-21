@@ -17,7 +17,7 @@ const NavBar = () => {
     <FontAwesomeIcon icon='bars' className='menu-icon'></FontAwesomeIcon>
   );
   const [click, setClick] = useState(false);
-  const [DropdownAbout, setDropDownAbout] = useState(false);
+  const [dropdownAbout, setDropDownAbout] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobile = () => setClick(false);
@@ -73,7 +73,7 @@ const NavBar = () => {
             >
               About Us {caret}
             </Link>
-            {DropdownAbout && <DropdownAbout />}
+            {dropdownAbout && <DropdownAbout />}
           </li>
           <li className={styles.nav_item}>
             <Link
@@ -83,7 +83,7 @@ const NavBar = () => {
             >
               Community {caret}
             </Link>
-            {DropdownAbout && <DropdownAbout />}
+            {dropdownAbout && <DropdownAbout />}
           </li>
           <li className={styles.nav_item}>
             <Link
