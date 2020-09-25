@@ -46,9 +46,9 @@ const NavBar = () => {
           Diversify Portland
         </Link>
         <div onClick={handleClick} className={styles.menu_icon}>
-          <div className={`${styles[bars]} ${click ? [x] : [bars]}`}></div>
+          {/* <div className={`${styles[bars]} ${click ? [x] : [bars]}`}></div> */}
+        <i className={click ? 'fas fa-times' : 'fas fa-bars'} id={styles.bar} />
         </div>
-        {/* <i className={click ? 'fas fa-times' : 'fas fa-bars'} /> */}
 
         <ul
           className={`${styles.nav_menu} ${

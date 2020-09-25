@@ -6,7 +6,7 @@
     top: 8rem;
     list-style: none;
     text-align: start;
-    &li {
+    & li {
         background: $orange;
         cursor: pointer;
         &:hover {
