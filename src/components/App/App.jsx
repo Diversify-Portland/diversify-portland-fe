@@ -10,7 +10,7 @@ import {
 library.add(faTimes, faBars, faCaretDown, faFacebook, faInstagram);
 // import Splash from '../Pages/Splash';
 import { sectionsData } from '../../../data/AboutPeople';
-import AboutUsList from '../Pages/AboutUs';
+import AboutSectionList from '../Pages/AboutSectionList';
 import NavBar from '../Nav/NavBar';
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
 
     <Router>
       <NavBar />
-      <AboutUsList sections={sectionsData} />
+      <AboutSectionList sections={sectionsData} />
     </Router>
   );
 }

@@ -15,7 +15,7 @@ Mss_Oregon,
   {
     name: 'Meet True',
     heading: 'Social media specialist & event curator / facilitator',
-    img: 'True',
+    img: 'true',
     text: ` 
 My name is True and I'm 9 years old. My grade is now Fourth grade. What I want to be when I grow up is an actor because I watch television and It looks hard but fun to be an actor. There has recently been a lot of racism in Portland, Oregon, so I think that maybe we can change how it is and help with people realizing there’s so much more to people than just the color of their skin. Everybody is beautiful in their own ways. I can't wait to talk with other youth & create kid only parties!
 
@@ -30,7 +30,7 @@ My name is True and I'm 9 years old. My grade is now Fourth grade. What I want t
     img: 'Klassic',
     text: `My name is Klassic and I'm the third co-founder of the NCDAC & Diversify Portland. I’m 15 years old and I’m currently a sophomore at Parkrose High School. When I grow up I wanna be a Graphic designer. I chose this because I really like to design and create stuff digitally, like making shirts, pants or sweats, and even things like buttons. I want to help Portland by helping communicate the importance of diversity to the youth of Portland, especially because if the youth don’t get taught now then that could affect the generation of now and the future from now. 
 `,
-    secId: 'klassic',
+    secId: 'Klassic',
     colorId: 'color_3',
   },
 ];

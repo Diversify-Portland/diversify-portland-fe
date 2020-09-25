@@ -7,7 +7,7 @@
      position: relative;
      min-height: 100vh;
      padding-top: 6rem;
-        background: linear-gradient(to bottom, black,  rgb(255, 145, 0));
+        background: linear-gradient(to bottom, $green,  rgb(255, 60, 0));
 
 
      @media (max-width: 480px) {
@@ -84,16 +84,14 @@
   cursor: pointer;
 }
 .color_1 {
-    background-color:  #4718f0c4;
+    background-color:  #03f12bc4;
 }
 .color_2 {
-  background-color: rgba(0, 132, 255, 0.781);
+  background-color: rgba(243, 116, 6, 0.781);
 }
 .color_3 {
-  background-color: rgba(133, 52, 70, 0.829);
+  background-color: rgba(247, 4, 4, 0.6);
 }
-.color_4 {
-  background-color: rgba(14, 156, 9, 0.774);
-}
+
 
   

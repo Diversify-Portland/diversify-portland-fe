@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AboutUs from './AboutUs';
-const AboutUsList = ({ sections }) => {
+import AboutSection from './AboutSection';
+const AboutSectionList = ({ sections }) => {
   const sectionElements = sections.map((sectionObj, i) => (
     <section key={i}>
-      <AboutUs {...sectionObj} />
+      <AboutSection {...sectionObj} />
     </section>
   ));
 
   return <>{sectionElements}</>;
 };
 
-AboutUsList.propTypes = {
+AboutSectionList.propTypes = {
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -24,4 +24,4 @@ AboutUsList.propTypes = {
   ),
 };
 
-export default AboutUsList;
+export default AboutSectionList;

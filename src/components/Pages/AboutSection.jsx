@@ -31,7 +31,7 @@ const AboutSection = ({ name, img, text, heading, secId, colorId }) => {
         scrub: true,
       },
     }),
-      [pContent, pImage];
+    [pContent, pImage];
   });
 
   return (
@@ -41,7 +41,10 @@ const AboutSection = ({ name, img, text, heading, secId, colorId }) => {
     >
       <section ref={pSection} className={styles.pSection}>
         <div className={styles.pContainer}>
-          <div ref={pContent} className={`${styles.pContent} ${styles[colorId]}`}>
+          <div
+            ref={pContent}
+            className={`${styles.pContent} ${styles[colorId]}`}
+          >
             <h2 className={styles.title}>{name}</h2>
             <h3 className={styles.heading}>{heading}</h3>
             <p className={styles.paragraph}>{text}</p>
@@ -51,7 +54,8 @@ const AboutSection = ({ name, img, text, heading, secId, colorId }) => {
         <img
           ref={pImage}
           className={styles.pImage}
-          src={`https://raw.githubusercontent.com/evestockstill/redtail/master/src/assets/${img}.jpg`}
+          src={`https://.github.com/Diversify-Portland/diversify-portland-fe/tree/refactorNav/src/assets/${img}.jpg`}
+         
         ></img>
       </section>
     </div>
