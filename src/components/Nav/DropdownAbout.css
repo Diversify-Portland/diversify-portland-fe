@@ -1,6 +1,6 @@
 @import '../../index.css';
 
-.dropdown-menu {
+.dropdown_menu {
     width: 20rem;
     position: absolute;
     top: 8rem;
@@ -13,10 +13,10 @@
             background: $yellow;
         }
     }
-    .clicked {
+    .dropdown_menu__clicked {
         display: none;
     }
-    .dropdown-link {
+    .dropdown_link {
         display: block;
         width: 100%;
         height: 100%;

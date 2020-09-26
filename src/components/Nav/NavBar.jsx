@@ -52,7 +52,7 @@ const NavBar = () => {
 
         <ul
           className={`${styles.nav_menu} ${
-            click ? styles.active : styles.inactive
+            click ? styles.nav_menu__active : styles.nav_menu
           }`}
         >
           {/* <ul className={click ? 'nav_menu active' : 'nav_menu'}> */}
@@ -77,13 +77,12 @@ const NavBar = () => {
           </li>
           <li className={styles.nav_item}>
             <Link
-              to='/about'
+              to='/community'
               className={styles.nav_links}
               onClick={closeMobile}
             >
-              Community {caret}
+              Community 
             </Link>
-            {dropdownAbout && <DropdownAbout />}
           </li>
           <li className={styles.nav_item}>
             <Link

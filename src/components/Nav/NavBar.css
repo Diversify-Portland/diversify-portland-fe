@@ -75,12 +75,12 @@
     transition: all 0.5s ease;
   }
 
-  .nav_menu.active {
+  .nav_menu__active {
     background: #242222;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 1000;
   }
 
   .nav_links {

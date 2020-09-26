@@ -18,7 +18,7 @@ export default function App() {
 
     <Router>
       <NavBar />
-      <AboutSectionList sections={sectionsData} />
+      {/* <AboutSectionList sections={sectionsData} /> */}
     </Router>
   );
 }
