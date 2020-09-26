@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './About.css';
+import MissOregon from '../../assets/truebear.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,7 @@ const AboutSection = ({ name, img, text, heading, secId, colorId }) => {
   return (
     <div
       id={secId}
-      className={`${styles.greenSock_container} ${styles[secId]}`}
+      className={`${styles.greenSock_container} ${styles.border_gradient} ${styles.border_gradient__rainbow} ${styles[secId]}`}
     >
       <section ref={pSection} className={styles.pSection}>
         <div className={styles.pContainer}>
@@ -45,7 +46,7 @@ const AboutSection = ({ name, img, text, heading, secId, colorId }) => {
             ref={pContent}
             className={`${styles.pContent} ${styles[colorId]}`}
           >
-            <h2 className={styles.title}>{name}</h2>
+            <h2 className={styles.name}>{name}</h2>
             <h3 className={styles.heading}>{heading}</h3>
             <p className={styles.paragraph}>{text}</p>
           </div>
@@ -54,7 +55,8 @@ const AboutSection = ({ name, img, text, heading, secId, colorId }) => {
         <img
           ref={pImage}
           className={styles.pImage}
-          src={`https://.github.com/Diversify-Portland/diversify-portland-fe/tree/refactorNav/src/assets/${img}.jpg`}
+          src={MissOregon}
+          // src={`https://.github.com/Diversify-Portland/diversify-portland-fe/tree/refactorNav/src/assets/${img}.jpg`}
          
         ></img>
       </section>

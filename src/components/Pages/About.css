@@ -7,8 +7,7 @@
      position: relative;
      min-height: 100vh;
      padding-top: 6rem;
-        background: linear-gradient(to bottom, $green,  rgb(255, 60, 0));
-
+background: $black;
 
      @media (max-width: 480px) {
           max-width: 100% !important;
@@ -16,7 +15,7 @@
          
     }
 }
-     .title {
+     .name {
          font-size: 2rem;
   letter-spacing: .1em;
   padding-bottom: .6rem;
@@ -28,7 +27,7 @@
 .pSection {
   position: relative;
   padding-top: 250px;
-  padding-bottom: 300px;
+  padding-bottom: 150px;
   @media (max-width: 480px) {
       padding-bottom: 50px;
          padding-top: 270px;
@@ -40,7 +39,7 @@
   margin: 0 auto;
   max-width: 80vw;
   position: relative;
-  z-index: 1;
+    z-index: 1;
    @media (max-width: 480px) {
         max-width: 90vw; 
         padding: 1rem;
@@ -55,11 +54,7 @@
    box-shadow: 0 10px 10px -10px black;
   color: white;
   padding: 3.5rem;
-  @media (max-width: 680px) {
-         width: 85%;
-         font-size: 1.8rem;
-         padding: 3rem;
-    }
+ 
 }
 
 .pImage {
@@ -76,22 +71,23 @@
          
     }
 }
-.top{
-  font-size: 1.3rem;
-  display: flex;
-  justify-content: flex-end;
-  color: white;
-  cursor: pointer;
-}
+
 .color_1 {
     background-color:  #03f12bc4;
 }
 .color_2 {
-  background-color: rgba(243, 116, 6, 0.781);
+  background-color: rgba(248, 240, 4, 0.781);
 }
 .color_3 {
   background-color: rgba(247, 4, 4, 0.6);
 }
 
 
-  
+  .border_gradient {
+  border-bottom: 10px solid;
+  border-image-slice: 1;
+  border-width: 10px;
+}
+.border_gradient__rainbow {
+  border-image-source: linear-gradient(to right, $red, $orange, $yellow, $green, $red, $orange, $yellow, $green, $red, $orange, $yellow, $green);
+}
