@@ -5,7 +5,7 @@ import styles from './ButtonNav.css';
 const ButtonNav = () => {
   return (
     <>
-      <div className='color'> 
+      <div className={styles.color}> 
         <Link to='join-us'>
           <button className={styles.btn}>Join Us</button>
         </Link>

@@ -70,10 +70,10 @@ const NavBar = () => {
               to='/about'
               className={styles.nav_links}
               onClick={closeMobile}
-            >
-              About Us {caret}
+            >About Us
+              {/* About Us {caret} */}
             </Link>
-            {dropdownAbout && <DropdownAbout />}
+            {/* {dropdownAbout && <DropdownAbout />} */}
           </li>
           <li className={styles.nav_item}>
             <Link
